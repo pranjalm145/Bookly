@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Online Book Store Website Design Tutorial</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-1">
+            <a href="#" class="logo"> <i class="fas fa-book"></i> Bookly </a>
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+        </div>
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#Donate">Donate</a>
+                <a href="#Buy Books">Buy Books</a>
+                <a href="#Sell Old Books">Sell Old Books</a>
+                <a href="#Recommend">Recommend</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#reviews" class="fas fa-comments"></a>
+        <a href="#blogs" class="fas fa-blog"></a>
+    </nav>
+
+    <div class="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+        <form action="">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" name="" class="box" placeholder="enter your email" id="">
+            <span>password</span>
+            <input type="password" name="" class="box" placeholder="enter your password" id="">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p>forget password? <a href="#">click here</a></p>
+            <p>don't have an account? <a href="#">create one</a></p>
+        </form>
+    </div>
+
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>Donate your Books</h3>
+                <p>Donate a book, make a difference! Every donated book helps spread knowledge, inspire new readers, and
+                    support sustainable reading habits. By giving books a second life, you're not just
+                    decluttering—you're empowering others to explore, learn, and grow. Together, let's create a world
+                    where every story finds a reader!</p>
+                <a href="#" class="btn">Donate now</a>
+            </div>
+            <div class="swiper books-slider">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide"><img
+                            src="{{ url_for('static', filename='images/abstract-child-like-education-book-cover.png') }}"
+                            alt=""></a>
+                    <a href="#" class="swiper-slide"><img
+                            src="{{ url_for('static', filename='images/child-like-coloring-mandalas-book-cover.png') }}"
+                            alt=""></a>
+                    <a href="#" class="swiper-slide"><img
+                            src="{{ url_for('static', filename='images/creative-innovative-education-book-cover.png') }}"
+                            alt=""></a>
+                    <a href="#" class="swiper-slide"><img
+                            src="{{ url_for('static', filename='images/instagram-story-template-doodle-colorful-winter-drawing.png') }}"
+                            alt=""></a>
+                    <a href="#" class="swiper-slide"><img
+                            src="{{ url_for('static', filename='images/hand-drawn-colorful-design-book-cover.png') }}"
+                            alt=""></a>
+                    <a href="#" class="swiper-slide"><img
+                            src="{{ url_for('static', filename='images/winter-book-cover-template.png') }}" alt=""></a>
+                </div>
+                <img src="{{ url_for('static', filename='images/minimal-product-backdrop-with-natural-light.png') }}"
+                    class="stand" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="icons-container">
+        <div class="icons">
+            <i class="fas fa-plane"></i>
+            <div class="content">
+                <h3>free shipping</h3>
+                <p>order over $100</p>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fas fa-lock"></i>
+            <div class="content">
+                <h3>secure payment</h3>
+                <p>100% secure payment</p>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fas fa-redo-alt"></i>
+            <div class="content">
+                <h3>easy return</h3>
+                <p>10 days returns</p>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fas fa-headset"></i>
+            <div class="content">
+                <h3>24/7 support</h3>
+                <p>call us anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured" id="featured">
+        <h1 class="heading"> <span>featured books</span></h1>
+        <div class="swiper featured-slider">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/download (4).jpeg') }}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/howls moving castle.jpeg') }}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/Class 9 Science Book.jpeg') }}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/Oswaal CBSE One for All, Science, Class 9 (For 2023 Exam) _ Oswaal Editorial Board _ 9789355956149.jpeg') }}"
+                            alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/Class 10 Understanding Econimic Development Book.jpeg') }}"
+                            alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/Class 10 Foot Prints Without Feet Supp_ Reader Book.jpeg') }}"
+                            alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/HOME.jpeg') }}" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/abstract-child-like-education-book-cover.png') }}"
+                            alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/child-like-coloring-mandalas-book-cover.png') }}"
+                            alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='images/creative-innovative-education-book-cover.png') }}"
+                            alt="">
+                    </div>
+                    <div class="content">
+                        <h3>featured books</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <iframe src="https://www.chatbase.co/chatbot-iframe/cwvSbNQZqRB5eO-3EYQO_" width="100%"
+        style="height: 100%; min-height: 700px" frameborder="0"></iframe>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "cwvSbNQZqRB5eO-3EYQO_",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="cwvSbNQZqRB5eO-3EYQO_" domain="www.chatbase.co" defer>
+    </script>
+</body>
+
+</html>
